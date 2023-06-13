@@ -25,7 +25,7 @@ Los beneficiarios de la CPS incluyen a los trabajadores activos, jubilados y sus
 Es importante destacar que la Caja Petrolera de Salud es una entidad específica para los trabajadores del sector petrolero en Bolivia y opera de manera independiente de otras instituciones de seguridad social en el país, como el Sistema Nacional de Salud (SNS) o el Seguro Social Obligatorio de Largo Plazo (SOAT).
 ## Diagrama de la base de datos
 
-![Diagrama_Base_Datos](DiagramaBaseDatos.png)
+![Diagrama_Base_Datos](Diagrama_base_de_datos_actualizado.jpg)
 
 ## Contraseña
 123m (para todos los servidores)
