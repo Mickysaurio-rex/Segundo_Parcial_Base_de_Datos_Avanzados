@@ -27,6 +27,30 @@ Es importante destacar que la Caja Petrolera de Salud es una entidad específica
 
 ![Diagrama_Base_Datos](Diagrama_base_de_datos_actualizado.jpg)
 
+## Triggers
+*actualiza_cantidad_medicamento* = Actualiza la cantidad del medicamento en la tabla *Medicamentos* al momento de agregar el mismo medicamento a una subasta.
+*actualizar_costo_total* = Actualiza el costo final de todos los medicamentos enlazados a una subasta.
+*VerificarEstadoSubasta* = verifica que el estado de la subasta este "En Curso" si es que se quiere agregar un instituto a los participantes.
+*verificar_subasta_existente* = Verifica que al momento de programar una subasta, esta no exista en la tabla.
+*verifica_estado_subasta* = Verifica que la subasta no haya finalizado o estado en curso para agregar medicamentos.
+
+## Store Procedure
+*CrearSubasta*  = Ayuda a la creacion de una subasta, agregando automaticamente la fecha de finalizacion y el estado de "No iniciado".
+*RellenarSubastaMedicamento* = Agrega medicamentos a una subasta.
+*PujarPorSubasta* = Permite participar como instituo en la subasta, si el dinero que ofrece es menor al anterior postor, no permite la creacion.
+*ActualizarEstadoSubasta* = Actualiza el estado de la subasta para ponerla en curso o finalizarla.
+*CrearTransferencia* = Crea la transferencia una vez finalizada la subasta.
+
+## Index
+CREATE INDEX idx_precio_unitario ON Medicamentos (precio_unitario);
+CREATE INDEX idx_estado ON Subasta (estado);
+CREATE INDEX idx_nombre_banco ON Banco (nombre_banco);
+CREATE INDEX idx_subasta_id ON Institutos_Participantes (subasta_id);
+CREATE INDEX idx_instituto_ganador ON Subasta (instituto_ganador);
+CREATE INDEX idx_nombre_lab ON Medicamentos (nombre_medicamento, laboratorio_id);
+CREATE INDEX idx_subasta_medicamento ON Subasta_Medicamento (subasta_id, medicamento_id);
+CREATE INDEX idx_departamento_instituto ON Instituto (departamento_id, nombre_instituto);
+
 ## Contraseña
 123m (para todos los servidores)
 
