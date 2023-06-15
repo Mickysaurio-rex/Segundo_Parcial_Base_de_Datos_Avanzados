@@ -43,12 +43,19 @@ Es importante destacar que la Caja Petrolera de Salud es una entidad específica
 
 ## Index
 CREATE INDEX idx_precio_unitario ON Medicamentos (precio_unitario);
+
 CREATE INDEX idx_estado ON Subasta (estado);
+
 CREATE INDEX idx_nombre_banco ON Banco (nombre_banco);
+
 CREATE INDEX idx_subasta_id ON Institutos_Participantes (subasta_id);
+
 CREATE INDEX idx_instituto_ganador ON Subasta (instituto_ganador);
+
 CREATE INDEX idx_nombre_lab ON Medicamentos (nombre_medicamento, laboratorio_id);
+
 CREATE INDEX idx_subasta_medicamento ON Subasta_Medicamento (subasta_id, medicamento_id);
+
 CREATE INDEX idx_departamento_instituto ON Instituto (departamento_id, nombre_instituto);
 
 ## Contraseña
