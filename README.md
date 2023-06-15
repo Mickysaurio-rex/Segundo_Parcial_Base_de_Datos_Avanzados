@@ -13,6 +13,9 @@ Por lo tanto en el trabajo se buscara registrar todas las transacciones de los m
 
 - [Descripción de la entidad](#descripción-de-la-entidad)
 - [Diagrama de la base de datos](#diagrama-de-la-base-de-datos)
+- [Triggers](#triggers)
+- [Store Procedure](#store-procedure)
+- [Index](#index)
 - [Requisitos Técnicos](#requisitos-técnicos)
 - [Ejecución local](#ejecución-local)
 
